@@ -3,25 +3,20 @@ import streamlit as st
 # Apply custom CSS for green radio button selection dots
 st.markdown("""
     <style>
-        /* Force green on selected radio button dot */
-        div[role="radiogroup"] > div > div[data-baseweb="radio"] input:checked + div {
-            background-color: #008000 !important; /* Green selection circle */
-            border-color: #008000 !important; /* Green border for the dot */
-        }
-
-        /* Ensure radio button text remains black */
-        div[role="radiogroup"] > div > div[data-baseweb="radio"] label {
-            color: black !important; /* Keep text black */
-            background-color: transparent !important; /* No background on text */
+        div[role="radiogroup"] input:checked + div {
+            background-color: #008000 !important; /* Green selection dot */
         }
     </style>
 """, unsafe_allow_html=True)
 
 # Display the logo at the top
-st.image("logo.png", width=400)  # Smaller logo
+st.image("logo.png", width=400)  # Larger logo size
 
 # Title of the app
 st.title("Leadership Readiness Tool")
+
+# Add a text box for summary input at the top
+summary = st.text_area("Enter a summary or description:", placeholder="Write your summary here...")
 
 # Define behaviors and their 5 questions each
 behaviors = {
