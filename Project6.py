@@ -16,7 +16,7 @@ st.image("logo.png", width=400)  # Larger logo size
 st.title("Leadership Readiness Tool")
 
 # Add a text box for summary input at the top
-summary = st.text_area("Enter a summary or description:", placeholder="Write your summary here...")
+summary = st.text_area("Case Study/Problem Statement:", placeholder="Write your summary here...")
 
 # Define behaviors and their 5 questions each
 behaviors = {
